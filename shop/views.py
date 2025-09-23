@@ -11,7 +11,7 @@ def product_list(request,category_slug=None):
             Category,
             slug=category_slug
         )
-        products = Product.filter(category=category)
+        products = Product.objects.filter(category=category)
     return render(
         request,
         'shop/product/list.html',
